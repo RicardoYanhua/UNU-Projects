@@ -1,0 +1,66 @@
+<div class="all">
+    <div class="cont">
+
+
+<strong>Listar Pedidos</strong>
+
+
+        <pre>
+    {{pedidos | json}}
+        </pre>
+
+
+
+
+
+    </div>
+
+
+
+    <div>
+        <strong>Listar Pedidos por cliente</strong>
+        <pre>
+    {{pedidoscliente | json}}
+</pre>
+    </div>
+
+
+    <div>
+        <strong>Listar Pedidos por Restaurante</strong>
+        <pre>
+    {{pedidosRestaurante | json}}
+</pre>
+    </div>
+
+    <div>
+        <strong>Listar Pedidos por Categoria Plato</strong>
+        <pre>
+    {{pedidosCatPlato | json}}
+</pre>
+    </div>
+
+
+</div>
+
+<style>
+    * {
+        font-size: 18px;
+    }
+
+    .cont {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .all {
+        display: flex;
+        gap: 100px;
+    }
+
+    pre {
+        width: fit-content;
+        font-weight: 500;
+    }
+</style>

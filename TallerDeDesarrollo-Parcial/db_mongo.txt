@@ -1,0 +1,29 @@
+PORT = 27019
+USER = admin
+PASSWORD = Unu#2025
+
+// Crear la base de datos db_usuario
+
+// crear la colección usuario
+// (La colección se crea automáticamente al insertar los documentos)
+
+
+// Insertar este código en mongoDB Shell
+
+db.usuario.insertMany([
+    {
+        idUsuario: 1,
+        nombre: "admin",
+        clave: "123456"
+    },
+    {
+        idUsuario: 2,
+        nombre: "juan",
+        clave: "pass123"
+    },
+    {
+        idUsuario: 3,
+        nombre: "maria",
+        clave: "abc123"
+    }
+]);

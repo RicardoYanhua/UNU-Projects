@@ -1,0 +1,289 @@
+
+const db = require('../Config/DataBaseConfig');
+
+const DB_TABLE = 'pedidos';
+const TABLE_COLUMN_NAME_ID = 'codigo';
+
+const Listar = async (req, res) => {
+    try {
+        const [DB_Lista] = await db.query('SELECT * FROM ' + DB_TABLE + ' ORDER BY ' + TABLE_COLUMN_NAME_ID + ' DESC');
+        res.json({
+            success: true,
+            count: DB_Lista.length,
+            data: DB_Lista
+        });
+    } catch (error) {
+        console.error('Error en obtener los registros desde la base de datos.');
+        res.json({
+            success: false,
+            mensaje: 'Error al obtener los registros.',
+            error: error.message
+        });
+    }
+};
+const ListarPedidoByCliente = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const [DB_Lista] = await db.query('SELECT * FROM ' + DB_TABLE + ' WHERE id_cliente = ?', [id]);
+
+         if (DB_Lista.length === 0) {
+            return res.status(404).json({
+                success: false,
+                mensaje: 'No se encontro un registro con el atributo id_cliente : ' + id
+            });
+        }
+
+        res.json({
+            success: true,
+            count: DB_Lista.length,
+            data: DB_Lista
+        });
+    } catch (error) {
+        console.error('Error en obtener los registros desde la base de datos.');
+        res.json({
+            success: false,
+            mensaje: 'Error al obtener los registros.',
+            error: error.message
+        });
+    }
+};
+
+
+const Crear = async (req, res) => {
+    try {
+        const {
+            fecha,
+            hora,
+            id_estado,
+            metodo_pago,
+            total,
+            observacion,
+            id_cliente,
+            id_mesero
+        } = req.body;
+
+
+        if (!id_estado || !id_cliente || !id_mesero) {
+            return res.status(400).json({
+                success: false,
+                mensaje: 'Estos campos: id_estado, id_cliente Y id_mesero son obligatorios.'
+            });
+        }
+        const [DB_NUEVO_REGISTRO] = await db.query(
+            'INSERT INTO ' + DB_TABLE
+            + ' ( '
+            + 'fecha, '
+            + 'hora, '
+            + 'id_estado, '
+            + 'metodo_pago, '
+            + 'total, '
+            + 'observacion, '
+            + 'id_cliente, '
+            + 'id_mesero  '
+            + ') VALUES (?,?,?,?,?,?,?,?)',
+            [
+                fecha,
+                hora,
+                id_estado,
+                metodo_pago,
+                total,
+                observacion,
+                id_cliente,
+                id_mesero
+            ]
+        );
+        res.status(201).json({
+            success: true,
+            mensaje: '[PEDIDO] Se ha creado un nuevo registro exitosamente',
+            data: {
+                id: DB_NUEVO_REGISTRO.insertId,
+                fecha,
+                hora,
+                id_estado,
+                metodo_pago,
+                total,
+                observacion,
+                id_cliente,
+                id_mesero
+            }
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            mensaje: 'Error al crear el registro.',
+            error: error.message,
+        });
+    }
+};
+
+const Actualizar = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const {
+             fecha,
+                hora,
+                id_estado,
+                metodo_pago,
+                total,
+                observacion,
+                id_cliente,
+                id_mesero
+        } = req.body;
+        const [DB_LISTA] = await db.query('SELECT * FROM ' + DB_TABLE + ' WHERE ' + TABLE_COLUMN_NAME_ID + ' = ?', [id]);
+        if (DB_LISTA.length === 0) {
+            return res.status(404).json({
+                success: false,
+                mensaje: 'No se encontro un registro con el atributo ' + TABLE_COLUMN_NAME_ID + ' : ' + id
+            });
+        }
+        await db.query(
+            'UPDATE ' + DB_TABLE + ' SET '
+            + 'fecha  = ? , '
+            + 'hora  = ? , '
+            + 'id_estado  = ? , '
+            + 'metodo_pago  = ? , '
+            + 'total  = ? , '
+            + 'observacion  = ? , '
+            + 'id_cliente  = ? , '
+            + 'id_mesero  = ?  '
+            + ' WHERE ' + TABLE_COLUMN_NAME_ID + ' = ?',
+            [
+                fecha,
+                hora,
+                id_estado,
+                metodo_pago,
+                total,
+                observacion,
+                id_cliente,
+                id_mesero, 
+                id
+            ]
+        );
+        res.status(200).json({
+            success: true,
+            mensaje: 'Registro actualizado correctamente.',
+            data: {
+                id,
+                fecha,
+                hora,
+                id_estado,
+                metodo_pago,
+                total,
+                observacion,
+                id_cliente,
+                id_mesero,
+            }
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            mensaje: 'Error al actualizar el registro.',
+            error: error.message,
+        });
+    }
+};
+
+const Eliminar= async (req, res) => {
+    try {
+        const { id } = req.params;
+        const [Registro] = await db.query('SELECT * FROM ' + DB_TABLE + ' WHERE ' + TABLE_COLUMN_NAME_ID + ' = ?', [id]);
+        if (Registro.length === 0) {
+            return res.status(404).json({
+                success: false,
+                mensaje: 'El registro no fue encontrado o no existe.'
+            });
+        }
+        await db.query('DELETE FROM ' + DB_TABLE + ' WHERE ' + TABLE_COLUMN_NAME_ID + ' = ?', [id]);
+        res.status(200).json({
+            success: true,
+            mensaje: 'Se ha eliminado el registro correctamente.'
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            mensaje: 'Error al eliminar el registro.',
+            error: error.message,
+        });
+    }
+};
+
+
+const ListarPedidosPorRestaurante = async (req, res) => {
+    const DB_TABLE_1 = 'pedidos';
+    const DB_TABLE_2 = 'meseros';
+    const DB_TABLE_3 = 'restaurantes';
+    try {
+
+        const { id } = req.params;
+        const [DB_RESULT] = await db.query(
+
+             'SELECT p.codigo AS id_pedido, p.fecha, p.hora, p.total, r.nombre AS restaurante, m.nombres AS mesero'
+            + ' FROM ' + DB_TABLE_1 + ' AS p'
+            + ' INNER JOIN ' + DB_TABLE_2 + ' m ON p.id_mesero = m.codigo'
+            + ' INNER JOIN ' + DB_TABLE_3 + ' r ON m.id_restaurante = r.codigo'
+            + ' WHERE r.codigo = ?',
+            [id]
+        );
+        res.json({
+            success: true,
+            mensaje: 'Lista de pedidos segun el restaurante',
+            count: DB_RESULT.length,
+            data: DB_RESULT
+        });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            success: false,
+            mensaje: 'Error al obtener los datos',
+            error: error.message
+        });
+    }
+};
+
+const ListarPedidosPorCategoriaPlato = async (req, res) => {
+    const DB_TABLE_1 = 'pedidos';
+    const DB_TABLE_2 = 'detalle_pedido';
+    const DB_TABLE_3 = 'platos';
+    const DB_TABLE_4 = 'categorias';
+    try {
+
+        const { id } = req.params;
+
+        const [DB_RESULT] = await db.query(
+
+             'SELECT p.codigo, p.fecha, p.hora, p.total, t.nombre AS platos, c.nombre AS categorias'
+            + ' FROM ' + DB_TABLE_1 + ' AS p'
+            + ' INNER JOIN ' + DB_TABLE_2 + ' d ON p.codigo = d.id_pedido'
+
+            + ' INNER JOIN ' + DB_TABLE_3 + ' t ON d.id_plato = t.codigo'
+            + ' INNER JOIN ' + DB_TABLE_4 + ' c ON t.id_categoria = c.codigo'
+            + ' WHERE c.codigo = ?',
+            [id]
+        );
+        res.json({
+            success: true,
+            mensaje: 'Lista de pedidos segun la categoria de plato',
+            count: DB_RESULT.length,
+            data: DB_RESULT
+        });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            success: false,
+            mensaje: 'Error al obtener los datos',
+            error: error.message
+        });
+    }
+};
+
+module.exports = {
+    Listar,
+    Crear,
+    Actualizar,
+    Eliminar,
+    ListarPedidoByCliente,
+    ListarPedidosPorRestaurante,
+    ListarPedidosPorCategoriaPlato
+};
