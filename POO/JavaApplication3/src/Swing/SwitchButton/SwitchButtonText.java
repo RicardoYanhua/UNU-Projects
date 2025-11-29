@@ -1,7 +1,7 @@
 package Swing.SwitchButton;
 
-import Swing.SwitchButton.Aux.SwitchListener;
-import Swing.SwitchButton.Aux.EvaluatorColor;
+import Swing.SwitchButton.auxiliary.SwitchListener;
+import Swing.SwitchButton.auxiliary.EvaluatorColor;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 import java.awt.Color;
 import java.awt.Font;

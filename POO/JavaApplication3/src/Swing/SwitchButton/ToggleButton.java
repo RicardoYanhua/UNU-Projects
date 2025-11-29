@@ -1,6 +1,6 @@
 package Swing.SwitchButton;
 
-import Swing.SwitchButton.Aux.ToggleListener;
+import Swing.SwitchButton.auxiliary.ToggleListener;
 import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Dimension;
