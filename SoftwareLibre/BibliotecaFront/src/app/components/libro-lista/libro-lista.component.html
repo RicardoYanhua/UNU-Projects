@@ -1,0 +1,89 @@
+<table>
+
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Titulo
+            </th>
+            <th>
+                Autor
+            </th>
+            <th>
+                ISBN
+            </th>
+            <th>
+                Editorial
+            </th>
+            <th>
+                Acciones
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let libro of libros">
+            <td>
+                {{ libro.id }}
+            </td>
+            <td>
+                {{ libro.titulo }}
+            </td>
+            <td>
+                {{ libro.autor }}
+            </td>
+            <td>
+                {{ libro.isbn }}
+            </td>
+            <td>
+                {{ libro.editorial }}
+            </td>
+            <td>
+                <a [routerLink]="['/libros/editar',libro.id]">Editar</a>
+                <button (click)="EliminarLibroPorCodigo(libro.id)" title="Eliminar"> Eliminar </button>
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+<style>
+    * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 350;
+    }
+
+    table {
+        margin-top: 20px;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 10px;
+
+        border-color: 2px solid red;
+        box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    table td,
+    th {
+        padding: 10px 10px;
+    }
+
+    table thead {
+        background-color: rgb(34, 34, 34);
+        color: white;
+
+    }
+
+    table thead th {
+        padding: 10px 50px;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: rgb(240, 240, 255);
+    }
+</style>

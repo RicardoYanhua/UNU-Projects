@@ -1,0 +1,170 @@
+2025-11-12T21:10:07.437-05:00  INFO 5328 --- [main] p.ms.test.security.SecurityApplication   : Starting SecurityApplication using Java 21.0.7 with PID 5328 (C:\Users\ricar\OneDrive\Desktop\Taller de Desarrollo - Projects\TDUNU\Security\target\classes started by ricar in C:\Users\ricar\OneDrive\Desktop\Taller de Desarrollo - Projects\TDUNU)
+2025-11-12T21:10:07.439-05:00  INFO 5328 --- [main] p.ms.test.security.SecurityApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-12T21:10:08.307-05:00  INFO 5328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-12T21:10:08.341-05:00  INFO 5328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
+2025-11-12T21:10:08.845-05:00  INFO 5328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 81 (http)
+2025-11-12T21:10:08.851-05:00  INFO 5328 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-12T21:10:08.851-05:00  INFO 5328 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-11-12T21:10:08.928-05:00  INFO 5328 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-12T21:10:08.928-05:00  INFO 5328 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1449 ms
+2025-11-12T21:10:09.199-05:00  INFO 5328 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-12T21:10:09.240-05:00  INFO 5328 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-11-12T21:10:09.242-05:00  INFO 5328 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-11-12T21:10:09.339-05:00  INFO 5328 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-11-12T21:10:09.425-05:00  INFO 5328 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-12T21:10:09.436-05:00  INFO 5328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-12T21:10:09.640-05:00  INFO 5328 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 1fec9584-8a24-40be-80fe-5babce8ad28f
+2025-11-12T21:10:09.642-05:00  INFO 5328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-12T21:10:09.782-05:00  INFO 5328 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-11-12T21:10:10.177-05:00  INFO 5328 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-12T21:10:10.248-05:00  INFO 5328 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-12T21:10:10.540-05:00  WARN 5328 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-12T21:10:11.025-05:00  INFO 5328 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-12T21:10:11.091-05:00  INFO 5328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 81 (http) with context path ''
+2025-11-12T21:10:11.098-05:00  INFO 5328 --- [main] p.ms.test.security.SecurityApplication   : Started SecurityApplication in 4.016 seconds (process running for 4.414)
+2025-11-12T21:10:19.546-05:00  INFO 5328 --- [http-nio-81-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-12T21:10:19.546-05:00  INFO 5328 --- [http-nio-81-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-12T21:10:19.547-05:00  INFO 5328 --- [http-nio-81-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-12T21:10:20.182-05:00  INFO 5328 --- [http-nio-81-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 419 ms
+2025-11-12T21:11:34.533-05:00  INFO 26284 --- [main] p.ms.test.security.SecurityApplication   : Starting SecurityApplication using Java 21.0.7 with PID 26284 (C:\Users\ricar\OneDrive\Desktop\Taller de Desarrollo - Projects\TDUNU\Security\target\classes started by ricar in C:\Users\ricar\OneDrive\Desktop\Taller de Desarrollo - Projects\TDUNU)
+2025-11-12T21:11:34.535-05:00  INFO 26284 --- [main] p.ms.test.security.SecurityApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-12T21:11:35.405-05:00  INFO 26284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-12T21:11:35.436-05:00  INFO 26284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interfaces.
+2025-11-12T21:11:35.953-05:00  INFO 26284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 81 (http)
+2025-11-12T21:11:35.958-05:00  INFO 26284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-12T21:11:35.959-05:00  INFO 26284 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-11-12T21:11:36.034-05:00  INFO 26284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-12T21:11:36.035-05:00  INFO 26284 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1459 ms
+2025-11-12T21:11:36.303-05:00  INFO 26284 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-12T21:11:36.344-05:00  INFO 26284 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-11-12T21:11:36.346-05:00  INFO 26284 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-11-12T21:11:36.432-05:00  INFO 26284 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-11-12T21:11:36.521-05:00  INFO 26284 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-12T21:11:36.533-05:00  INFO 26284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-12T21:11:36.743-05:00  INFO 26284 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 3b714a60-965a-4dfc-ab78-f6f03aae5c99
+2025-11-12T21:11:36.745-05:00  INFO 26284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-12T21:11:36.894-05:00  INFO 26284 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-11-12T21:11:37.260-05:00  INFO 26284 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-12T21:11:37.319-05:00  INFO 26284 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-12T21:11:37.770-05:00  WARN 26284 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-12T21:11:38.440-05:00  INFO 26284 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-12T21:11:38.592-05:00  INFO 26284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 81 (http) with context path ''
+2025-11-12T21:11:38.601-05:00  INFO 26284 --- [main] p.ms.test.security.SecurityApplication   : Started SecurityApplication in 4.415 seconds (process running for 4.804)
+2025-11-12T21:11:40.802-05:00  INFO 26284 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-12T21:11:40.803-05:00  INFO 26284 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-12T21:11:40.804-05:00  INFO 26284 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-11-12T21:11:41.852-05:00  INFO 26284 --- [http-nio-81-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 442 ms
+2025-11-12T21:12:38.689-05:00  INFO 500 --- [main] p.ms.test.security.SecurityApplication   : Starting SecurityApplication using Java 21.0.7 with PID 500 (C:\Users\ricar\OneDrive\Desktop\Taller de Desarrollo - Projects\TDUNU\Security\target\classes started by ricar in C:\Users\ricar\OneDrive\Desktop\Taller de Desarrollo - Projects\TDUNU)
+2025-11-12T21:12:38.691-05:00  INFO 500 --- [main] p.ms.test.security.SecurityApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-12T21:12:39.578-05:00  INFO 500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-12T21:12:39.609-05:00  INFO 500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interfaces.
+2025-11-12T21:12:40.132-05:00  INFO 500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 81 (http)
+2025-11-12T21:12:40.139-05:00  INFO 500 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-12T21:12:40.139-05:00  INFO 500 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-11-12T21:12:40.227-05:00  INFO 500 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-12T21:12:40.228-05:00  INFO 500 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1491 ms
+2025-11-12T21:12:40.536-05:00  INFO 500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-12T21:12:40.570-05:00  INFO 500 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-11-12T21:12:40.572-05:00  INFO 500 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-11-12T21:12:40.659-05:00  INFO 500 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-11-12T21:12:40.747-05:00  INFO 500 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-12T21:12:40.759-05:00  INFO 500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-12T21:12:40.971-05:00  INFO 500 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: db8e7076-6960-43ed-9a96-8bd9423baee2
+2025-11-12T21:12:40.972-05:00  INFO 500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-12T21:12:41.119-05:00  INFO 500 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-11-12T21:12:41.483-05:00  INFO 500 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-12T21:12:41.540-05:00  INFO 500 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-12T21:12:42.085-05:00  WARN 500 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-12T21:12:42.816-05:00  INFO 500 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-12T21:12:42.960-05:00  INFO 500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 81 (http) with context path ''
+2025-11-12T21:12:42.972-05:00  INFO 500 --- [main] p.ms.test.security.SecurityApplication   : Started SecurityApplication in 4.651 seconds (process running for 5.057)
+2025-11-12T21:12:44.793-05:00  INFO 500 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-12T21:12:44.793-05:00  INFO 500 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-12T21:12:44.796-05:00  INFO 500 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-12T21:12:46.122-05:00  INFO 500 --- [http-nio-81-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 343 ms
+2025-11-12T21:12:55.829-05:00  INFO 500 --- [http-nio-81-exec-5] p.m.t.s.controller.AuthController        : Post: Username string - Password string
+2025-11-12T21:14:24.521-05:00  INFO 27136 --- [main] p.ms.test.security.SecurityApplication   : Starting SecurityApplication using Java 21.0.7 with PID 27136 (C:\Users\ricar\OneDrive\Desktop\Taller de Desarrollo - Projects\TDUNU\Security\target\classes started by ricar in C:\Users\ricar\OneDrive\Desktop\Taller de Desarrollo - Projects\TDUNU)
+2025-11-12T21:14:24.523-05:00  INFO 27136 --- [main] p.ms.test.security.SecurityApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-12T21:14:25.382-05:00  INFO 27136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-12T21:14:25.416-05:00  INFO 27136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
+2025-11-12T21:14:25.919-05:00  INFO 27136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 81 (http)
+2025-11-12T21:14:25.925-05:00  INFO 27136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-12T21:14:25.925-05:00  INFO 27136 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-11-12T21:14:25.999-05:00  INFO 27136 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-12T21:14:26.000-05:00  INFO 27136 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1434 ms
+2025-11-12T21:14:26.266-05:00  INFO 27136 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-12T21:14:26.300-05:00  INFO 27136 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-11-12T21:14:26.302-05:00  INFO 27136 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-11-12T21:14:26.391-05:00  INFO 27136 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-11-12T21:14:26.478-05:00  INFO 27136 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-12T21:14:26.490-05:00  INFO 27136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-12T21:14:26.698-05:00  INFO 27136 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: db83dab5-55bd-4a7f-bc2b-1da72b7b4ed9
+2025-11-12T21:14:26.700-05:00  INFO 27136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-12T21:14:26.849-05:00  INFO 27136 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-11-12T21:14:27.206-05:00  INFO 27136 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-12T21:14:27.261-05:00  INFO 27136 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-12T21:14:27.718-05:00  WARN 27136 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-12T21:14:28.302-05:00  INFO 27136 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-12T21:14:28.423-05:00  INFO 27136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 81 (http) with context path ''
+2025-11-12T21:14:28.433-05:00  INFO 27136 --- [main] p.ms.test.security.SecurityApplication   : Started SecurityApplication in 4.266 seconds (process running for 4.686)
+2025-11-12T21:14:30.166-05:00  INFO 27136 --- [http-nio-81-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-12T21:14:30.167-05:00  INFO 27136 --- [http-nio-81-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-12T21:14:30.168-05:00  INFO 27136 --- [http-nio-81-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-11-12T21:14:31.115-05:00  INFO 27136 --- [http-nio-81-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 756 ms
+2025-11-12T21:14:43.305-05:00  INFO 17156 --- [main] p.ms.test.security.SecurityApplication   : Starting SecurityApplication using Java 21.0.7 with PID 17156 (C:\Users\ricar\OneDrive\Desktop\Taller de Desarrollo - Projects\TDUNU\Security\target\classes started by ricar in C:\Users\ricar\OneDrive\Desktop\Taller de Desarrollo - Projects\TDUNU)
+2025-11-12T21:14:43.307-05:00  INFO 17156 --- [main] p.ms.test.security.SecurityApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-12T21:14:44.161-05:00  INFO 17156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-12T21:14:44.190-05:00  INFO 17156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interfaces.
+2025-11-12T21:14:44.731-05:00  INFO 17156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 81 (http)
+2025-11-12T21:14:44.738-05:00  INFO 17156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-12T21:14:44.739-05:00  INFO 17156 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-11-12T21:14:44.817-05:00  INFO 17156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-12T21:14:44.817-05:00  INFO 17156 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1469 ms
+2025-11-12T21:14:45.117-05:00  INFO 17156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-12T21:14:45.152-05:00  INFO 17156 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-11-12T21:14:45.155-05:00  INFO 17156 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-11-12T21:14:45.237-05:00  INFO 17156 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-11-12T21:14:45.326-05:00  INFO 17156 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-12T21:14:45.337-05:00  INFO 17156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-12T21:14:45.539-05:00  INFO 17156 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 2ee4faae-f548-4ff6-8bb7-8cda75ac9067
+2025-11-12T21:14:45.540-05:00  INFO 17156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-12T21:14:45.690-05:00  INFO 17156 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-11-12T21:14:46.070-05:00  INFO 17156 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-12T21:14:46.128-05:00  INFO 17156 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-12T21:14:46.656-05:00  WARN 17156 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-12T21:14:47.300-05:00  INFO 17156 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-12T21:14:47.445-05:00  INFO 17156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 81 (http) with context path ''
+2025-11-12T21:14:47.456-05:00  INFO 17156 --- [main] p.ms.test.security.SecurityApplication   : Started SecurityApplication in 4.485 seconds (process running for 4.89)
+2025-11-12T21:14:49.323-05:00  INFO 17156 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-12T21:14:49.324-05:00  INFO 17156 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-12T21:14:49.325-05:00  INFO 17156 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-12T21:14:50.941-05:00  INFO 17156 --- [http-nio-81-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 310 ms
+2025-11-12T21:28:24.256-05:00  INFO 27588 --- [main] p.ms.test.security.SecurityApplication   : Starting SecurityApplication using Java 21.0.7 with PID 27588 (C:\Users\ricar\OneDrive\Desktop\Taller de Desarrollo - Projects\TDUNU\Security\target\classes started by ricar in C:\Users\ricar\OneDrive\Desktop\Taller de Desarrollo - Projects\TDUNU)
+2025-11-12T21:28:24.257-05:00  INFO 27588 --- [main] p.ms.test.security.SecurityApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-12T21:28:25.143-05:00  INFO 27588 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-12T21:28:25.177-05:00  INFO 27588 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interfaces.
+2025-11-12T21:28:25.660-05:00  INFO 27588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 81 (http)
+2025-11-12T21:28:25.667-05:00  INFO 27588 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-12T21:28:25.667-05:00  INFO 27588 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-11-12T21:28:25.744-05:00  INFO 27588 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-12T21:28:25.745-05:00  INFO 27588 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1448 ms
+2025-11-12T21:28:26.049-05:00  INFO 27588 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-12T21:28:26.089-05:00  INFO 27588 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-11-12T21:28:26.092-05:00  INFO 27588 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-11-12T21:28:26.182-05:00  INFO 27588 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-11-12T21:28:26.276-05:00  INFO 27588 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-12T21:28:26.286-05:00  INFO 27588 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-12T21:28:26.499-05:00  INFO 27588 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 0668640f-18f0-4a2c-b3bd-9b9927b59760
+2025-11-12T21:28:26.501-05:00  INFO 27588 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-12T21:28:26.656-05:00  INFO 27588 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-11-12T21:28:27.034-05:00  INFO 27588 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-12T21:28:27.095-05:00  INFO 27588 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-12T21:28:27.626-05:00  WARN 27588 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-12T21:28:28.380-05:00  INFO 27588 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-12T21:28:28.506-05:00  INFO 27588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 81 (http) with context path ''
+2025-11-12T21:28:28.515-05:00  INFO 27588 --- [main] p.ms.test.security.SecurityApplication   : Started SecurityApplication in 4.609 seconds (process running for 5.004)
+2025-11-12T21:28:30.552-05:00  INFO 27588 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-12T21:28:30.553-05:00  INFO 27588 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-12T21:28:30.554-05:00  INFO 27588 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-11-12T21:28:32.131-05:00  INFO 27588 --- [http-nio-81-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 583 ms
+2025-11-12T21:28:45.422-05:00  INFO 27588 --- [http-nio-81-exec-6] p.m.t.s.controller.AuthController        : Post: Username a - Password a

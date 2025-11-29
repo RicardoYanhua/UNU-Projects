@@ -1,0 +1,38 @@
+:host {
+  position: sticky;
+  top: 0;
+  
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /*backdrop-filter: blur(8px);
+   -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.9); */
+
+    background-color: white;
+    padding: 0.7rem 2rem;
+    transition: transform 0.3s ease;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+}
+
+.header-links {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header-items {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px
+}
+
+.icono-logo {
+    width: calc(var(--spacing) * 8);
+    height: calc(var(--spacing) * 8);
+}

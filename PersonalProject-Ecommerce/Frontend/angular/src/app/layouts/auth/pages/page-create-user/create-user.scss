@@ -1,0 +1,14 @@
+:host{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+form {
+    margin: auto;
+    padding: 5rem 4rem;
+    gap: 10px;
+    height: fit-content;
+}   

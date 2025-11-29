@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+:root{
+	
+	--InputColorBorder: rgb(23, 120, 242);
+	--InputColorShadow: rgb(23 120 242/ 10%);
+	
+	--ButtonColor: rgb(23, 120, 242);
+	--ButtonBackground: rgb(255,255,255);
+}
+
+
+.InputContainer {
+	display: flex;
+	line-height: 30px;
+	align-items: center;
+	position: relative;
+	width: 100%;
+}
+
+.input {
+	width: 100%;
+	height: 45px;
+	line-height: 30px;
+	padding: 0 1rem;
+	padding-left: 3rem;
+	border: 1px solid rgb(170,170,170);;
+	border-radius: 10px;
+	outline: none;
+	background-color: #f8fafc;
+	color: #0d0c22;
+	transition: .5s ease;
+}
+
+.input::placeholder {
+	color: #94a3b8;
+}
+
+.input:focus, input:hover {
+	outline: none;
+	border-color: var(--InputColorBorder);
+	background-color: #fff;
+	box-shadow: 0 0 20px 3px var(--InputColorShadow)
+}
+
+.icono {
+	position: absolute;
+	left: 1rem;
+	fill: none;
+	width: 1.4rem;
+	height: 1.4rem;
+}
+
+.inputpasword{
+	padding: 0 3.2rem;
+}
+
+.buttonTogglePassword {
+	position: absolute;
+	right: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.8rem;  /* Igual al tamaño del icono para precisión */
+	height: 1.8rem;
+}
+
+
+.buttonPasswordIcono {
+	width: 90%;
+	height: 90%;
+	object-fit: contain;
+	display: block;
+}
+
+
+
+
+
+
+.ButtonHover {
+  display: inline-block;
+  width: 100%;
+  height: 2.6em;
+  line-height: 1.5em;
+  
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid var(--ButtonColor);
+  transition: color 0.3s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 15px;
+  font-weight: 500;
+  color: var(--ButtonColor);
+  background-color: var(--ButtonBackground);
+}
+
+.ButtonHover:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--ButtonColor);
+  height: 300px;
+  width: 600px;
+  border-radius: 50%;
+}
+
+.ButtonHover:hover {
+  color: rgb(255,255,255);
+}
+
+.ButtonHover:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.5s;
+}
+
+.ButtonHover:hover:before {
+  top: -100px;
+  left: -100px;
+}
+
+.ButtonHover:active:before {
+  background: var(--ButtonColor);
+  transition: background 0s;
+}
+
+
+.btn-icon {
+	width: 30px;
+	height: 30px;
+	outline: none;
+	margin: 0;
+	border: none;
+	border-radius: 5px;
+	padding: 8px;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+	background-color: rgb(250, 250, 255);
+	background-size: 18px 18px;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: all 200ms ease-in;
+}
+
+.btn-icon:hover {
+	filter: invert(1);
+	box-shadow: 0 8px 12px rgba(255, 255, 255, 0.25);
+}
+
+.icon-delete {
+	background-image: url('/SVG/op_delete.svg');
+}
+
+.icon-edit {
+	background-image: url('/SVG/op_edit.svg');
+}
+
+.icon-view {
+	background-image: url('/SVG/op_view.svg');
+}
+
+.icon-add {
+	background-image: url('/SVG/icon-add.svg');
+}
+.icon-contrato {
+	background-image: url('/SVG/op_contrato.svg');
+}
+
+
+

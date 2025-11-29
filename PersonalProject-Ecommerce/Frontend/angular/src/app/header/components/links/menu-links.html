@@ -1,0 +1,11 @@
+
+
+<nav [class.horizontal]="orientation === 'horizontal'" [class.vertical]="orientation === 'vertical'">
+  <a *ngFor="let item of links"
+     class="link"
+     [class.activated]="item.href === enlaceActivo"
+     [class.disabled]="item.href === enlaceActivo"
+     (click)="activate_link(item, $event)">
+    {{ item.texto }}
+  </a>
+</nav>

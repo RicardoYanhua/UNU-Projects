@@ -1,0 +1,129 @@
+<form [formGroup]="registerForm" id="registerForm" class="animate__animated animate__fadeIn flex-column"
+    autocomplete="off" style="animation-duration: 1.0s; max-width: 750px" (ngSubmit)="onSubmit()">
+
+    <h1 class="page-tittle">Bienvenido a nuestra tienda online</h1>
+    <p class="page-description">Completa tus
+        datos personales para crear tu cuenta y comenzar a disfrutar de
+        nuestros productos, ofertas especiales y seguimiento de pedidos.</p>
+    <div class="separator-line"></div>
+
+
+
+
+
+    
+    <div class="google-user-container">
+  <img
+    *ngIf="picture"
+    [src]="picture"
+    alt="Foto de perfil de Google"
+    class="google-user-picture"
+  />
+
+  <div class="google-user-details">
+    <p class="google-user-label">Usted ha seleccionado la cuenta google:</p>
+    <p class="google-user-email">{{ email }}</p>
+  </div>
+</div>
+
+
+
+
+
+
+    <p class="page-subtittle">Completa tus datos personales</p>
+
+
+    <div class="input-container" (click)="inputnombres.focus()">
+        <label class="label-input" for="nombres">Nombres</label>
+        <div class="input">
+            <input #inputnombres placeholder="Ingrese su nombre" type="text" formControlName="nombres" id="nombres"
+                name="nombres">
+        </div>
+    </div>
+    <div class="message-error"
+        *ngIf="registerForm.get('nombres')?.invalid && (registerForm.get('nombres')?.touched || submitted)">
+        <div *ngIf="registerForm.get('nombres')?.errors?.['required']">
+            El nombre es obligatorio.
+        </div>
+    </div>
+    <div class="message-error" *ngIf="erroresValidacion && erroresValidacion['perfilNombres']">
+        {{ erroresValidacion['perfilNombres'] }}
+    </div>
+
+
+    <div class="flex-row-2">
+        <div class="row-1">
+            <div class="input-container" (click)="inputapellidopaterno.focus()">
+                <label class="label-input" for="apellidoPaterno">Apellido
+                    Paterno</label>
+                <div class="input">
+                    <input #inputapellidopaterno formControlName="apellidoPaterno" id="apellidoPaterno"
+                        name="apellidoPaterno" type="text" placeholder="Ingrese apellido paterno">
+                </div>
+            </div>
+            <div class="message-error"
+                *ngIf="registerForm.get('apellidoPaterno')?.invalid && (registerForm.get('apellidoPaterno')?.touched || submitted)">
+                <div *ngIf="registerForm.get('apellidoPaterno')?.errors?.['required']">
+                    El apellido paterno es obligatorio.
+                </div>
+            </div>
+            <div class="message-error" *ngIf="erroresValidacion && erroresValidacion['perfilPaterno']">
+                {{ erroresValidacion['perfilPaterno'] }}
+            </div>
+        </div>
+        <div class="row-1">
+            <div class="input-container" (click)="inputapellidomaterno.focus()">
+                <label class="label-input" for="apellidoMaterno">Apellido
+                    Materno</label>
+                <div class="input">
+                    <input #inputapellidomaterno formControlName="apellidoMaterno" id="apellidoMaterno"
+                        name="apellidoMaterno" type="text" placeholder="Ingrese apellido materno">
+                </div>
+
+
+            </div>
+
+            <div class="message-error"
+                *ngIf="registerForm.get('apellidoMaterno')?.invalid && (registerForm.get('apellidoMaterno')?.touched || submitted)">
+                <div *ngIf="registerForm.get('apellidoMaterno')?.errors?.['required']">
+                    El apellido materno es obligatorio.
+                </div>
+            </div>
+
+            <div class="message-error" *ngIf="erroresValidacion && erroresValidacion['perfilMaterno']">
+                {{ erroresValidacion['perfilMaterno'] }}
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="flex-between" style="margin-top: 30px;;">
+
+        <a type="button" [routerLink]="'/login'">
+            <svg class="icono" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill="currentColor" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"></path>
+                    <path fill="currentColor"
+                        d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z">
+                    </path>
+                </g>
+            </svg>
+            <span>Tengo una cuenta</span>
+        </a>
+
+        <button class="btn-dark" type="submit">
+            <span> Crear cuenta </span>
+            </button>
+    </div>
+
+
+
+
+
+
+
+</form>

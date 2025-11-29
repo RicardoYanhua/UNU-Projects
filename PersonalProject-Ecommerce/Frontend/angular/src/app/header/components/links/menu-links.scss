@@ -1,0 +1,56 @@
+:host {
+    margin-inline: 2rem;
+}
+
+.link.disabled {
+    pointer-events: none;
+}
+
+
+
+nav.horizontal {
+    flex-direction: row;
+    gap: 5rem;
+
+    .link {
+        padding: 7px 25px;
+        color: black;
+        border-bottom: 4px solid transparent;
+        font-size: 0.875rem;
+    }
+
+    .link.activated {
+        color: black;
+        background-color: transparent;
+        border-bottom: 4px solid black;
+
+    }
+}
+
+nav.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .link {
+        padding: 15px 25px;
+        color: black;
+        font-size: 1rem;
+        border-radius: 8px;
+        transition: all 0.1s;
+    }
+
+    .link.activated {
+        color: white;
+        background-color: black;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    nav.horizontal .link {
+        display: none;
+    }
+
+}

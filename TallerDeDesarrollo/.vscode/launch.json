@@ -1,0 +1,98 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "UsuarioApplication",
+            "request": "launch",
+            "mainClass": "polyglot.ms.test.transaction.UsuarioApplication",
+            "projectName": "Transaction"
+        },
+        {
+            "type": "java",
+            "name": "SecurityApplication",
+            "request": "launch",
+            "mainClass": "polyglot.ms.test.security.SecurityApplication",
+            "projectName": "Security"
+        },
+        {
+            "type": "java",
+            "name": "PayApplication",
+            "request": "launch",
+            "mainClass": "polyglot.ms.test.pay.PayApplication",
+            "projectName": "Pay"
+        },
+        {
+            "type": "java",
+            "name": "SwaggeraggregatorApplication",
+            "request": "launch",
+            "mainClass": "com.swagger.swaggeraggregator.SwaggeraggregatorApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "SwaggerApplication",
+            "request": "launch",
+            "mainClass": "com.ms.swagger.init.SwaggerApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "SwaggerApplication",
+            "request": "launch",
+            "mainClass": "com.ms.swagger.SwaggerApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "InvoiceApplication",
+            "request": "launch",
+            "mainClass": "polyglot.ms.test.invoice.InvoiceApplication",
+            "projectName": "Invoice"
+        },
+        {
+            "type": "java",
+            "name": "InvoiceApplication",
+            "request": "launch",
+            "mainClass": "POLYGLOT.MS.TEST.Invoice.InvoiceApplication",
+            "projectName": "Invoice"
+        },
+        {
+            "type": "java",
+            "name": "GatewayApplication",
+            "request": "launch",
+            "mainClass": "POLYGLOT.MS.TEST.Gateway.GatewayApplication",
+            "projectName": "appgateway"
+        },
+        {
+            "type": "java",
+            "name": "TransactionApplication",
+            "request": "launch",
+            "mainClass": "polyglot.ms.test.transaction.TransactionApplication",
+            "projectName": "Transaction"
+        },
+        {
+            "type": "java",
+            "name": "TransactionApplication",
+            "request": "launch",
+            "mainClass": "polyglot.ms.test.Transaction.TransactionApplication",
+            "projectName": "Transaction"
+        },
+        {
+            "type": "java",
+            "name": "TransactionApplication",
+            "request": "launch",
+            "mainClass": "POLYGLOT.MS.TEST.Transaction.TransactionApplication",
+            "projectName": "Transaction"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SecurityApplication<Security>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "POLYGLOT.MS.TEST.Security.SecurityApplication",
+            "projectName": "Security",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

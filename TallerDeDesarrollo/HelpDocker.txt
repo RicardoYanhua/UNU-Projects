@@ -1,0 +1,24 @@
+docker-compose -f .\compose-databases-all.yml up -d
+
+sql
+	port: 1434
+	user : sa
+	password : Unu#2025
+
+
+postgres
+	port : 5433
+	user: postgres
+	password : Unu#2025
+
+
+mysql
+	Anadir la propiedad
+		allowPublicKeyRetrieval True, en driver settings
+	port: 3307
+	password: Unu#2025
+
+mongodb
+	port : 27018
+	user: admin
+	passowrd: Unu#2025

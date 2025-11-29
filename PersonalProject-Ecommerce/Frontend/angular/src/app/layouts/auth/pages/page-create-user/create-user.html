@@ -1,0 +1,221 @@
+<form [formGroup]="registerForm" id="registerForm" class="animate__animated animate__fadeIn flex-column"
+    autocomplete="off" style="animation-duration: 1.0s; max-width: 750px" (ngSubmit)="onSubmit()">
+
+    
+    <h1 class="page-tittle">Bienvenido a nuestra tienda online</h1>
+    <p class="page-description">Completa tus
+        datos personales para crear tu cuenta y comenzar a disfrutar de
+        nuestros productos, ofertas especiales y seguimiento de pedidos.</p>
+    <div class="separator-line"></div>
+
+
+    <p class="page-subtittle">Completa tus datos personales</p>
+
+
+    <div class="input-container" (click)="inputnombres.focus()">
+        <label class="label-input" for="nombres">Nombres</label>
+        <div class="input">
+            <input #inputnombres placeholder="Ingrese su nombre" type="text" formControlName="nombres" id="nombres"
+                name="nombres">
+        </div>
+    </div>
+    <div class="message-error"
+        *ngIf="registerForm.get('nombres')?.invalid && (registerForm.get('nombres')?.touched || submitted)">
+        <div *ngIf="registerForm.get('nombres')?.errors?.['required']">
+            El nombre es obligatorio.
+        </div>
+    </div>
+    <div class="message-error" *ngIf="erroresValidacion && erroresValidacion['perfilNombres']">
+        {{ erroresValidacion['perfilNombres'] }}
+    </div>
+
+
+
+    <div class="flex-row-2">
+        <div class="row-1">
+            <div class="input-container" (click)="inputapellidopaterno.focus()">
+                <label class="label-input" for="apellidoPaterno">Apellido
+                    Paterno</label>
+                <div class="input">
+                    <input #inputapellidopaterno formControlName="apellidoPaterno" id="apellidoPaterno"
+                        name="apellidoPaterno" type="text" placeholder="Ingrese apellido paterno">
+                </div>
+            </div>
+            <div class="message-error"
+                *ngIf="registerForm.get('apellidoPaterno')?.invalid && (registerForm.get('apellidoPaterno')?.touched || submitted)">
+                <div *ngIf="registerForm.get('apellidoPaterno')?.errors?.['required']">
+                    El apellido paterno es obligatorio.
+                </div>
+            </div>
+            <div class="message-error" *ngIf="erroresValidacion && erroresValidacion['perfilPaterno']">
+                {{ erroresValidacion['perfilPaterno'] }}
+            </div>
+        </div>
+        <div class="row-1">
+            <div class="input-container" (click)="inputapellidomaterno.focus()">
+                <label class="label-input" for="apellidoMaterno">Apellido
+                    Materno</label>
+                <div class="input">
+                    <input #inputapellidomaterno formControlName="apellidoMaterno" id="apellidoMaterno"
+                        name="apellidoMaterno" type="text" placeholder="Ingrese apellido materno">
+                </div>
+
+
+            </div>
+
+            <div class="message-error"
+                *ngIf="registerForm.get('apellidoMaterno')?.invalid && (registerForm.get('apellidoMaterno')?.touched || submitted)">
+                <div *ngIf="registerForm.get('apellidoMaterno')?.errors?.['required']">
+                    El apellido materno es obligatorio.
+                </div>
+            </div>
+
+            <div class="message-error" *ngIf="erroresValidacion && erroresValidacion['perfilMaterno']">
+                {{ erroresValidacion['perfilMaterno'] }}
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="separator-line"></div>
+    <p class="page-subtittle">Registra tu cuenta</p>
+
+    <div class="input-container" (click)="inputusername.focus()">
+        <label class="label-input required" for="username">Correo
+            electronico</label>
+        <div class="input">
+            <svg class="icono" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM16 12V13.5C16 14.8807 17.1193 16 18.5 16V16C19.8807 16 21 14.8807 21 13.5V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21H16"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </svg>
+            <input #inputusername formControlName="email" id="email" name="email" type="email"
+                placeholder="Correo electrónico">
+
+
+        </div>
+    </div>
+    <div class="message-error"
+        *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.touched || submitted)">
+
+        <div *ngIf="registerForm.get('email')?.errors?.['required']">
+            El correo electrónico es obligatorio.
+        </div>
+        <div *ngIf="registerForm.get('email')?.errors?.['email']">
+            Ingrese un correo electrónico válido.
+        </div>
+    </div>
+
+    <div class="message-error" *ngIf="erroresValidacion && erroresValidacion['username']">
+        {{ erroresValidacion['username'] }}
+    </div>
+
+
+    <div class="input-container" (click)="inputpassword.focus()">
+        <label class="label-input" for="password">Contraseña</label>
+        <div class="input">
+            <svg class="icono" fill="currentColor" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                            }
+                        </style>
+                    </defs>
+                    <path
+                        d="M21,2a8.9977,8.9977,0,0,0-8.6119,11.6118L2,24v6H8L18.3881,19.6118A9,9,0,1,0,21,2Zm0,16a7.0125,7.0125,0,0,1-2.0322-.3022L17.821,17.35l-.8472.8472-3.1811,3.1812L12.4141,20,11,21.4141l1.3787,1.3786-1.5859,1.586L9.4141,23,8,24.4141l1.3787,1.3786L7.1716,28H4V24.8284l9.8023-9.8023.8472-.8474-.3473-1.1467A7,7,0,1,1,21,18Z">
+                    </path>
+                    <circle cx="22" cy="10" r="2"></circle>
+                    <rect id="_Transparent_Rectangle_" data-name="<Transparent Rectangle>" class="cls-1" width="32"
+                        height="32"></rect>
+                </g>
+            </svg>
+
+            <input #inputpassword formControlName="password" placeholder="Ingrese su contraseña" id="password"
+                name="password" [type]="verContrasena ? 'text' : 'password'">
+            <!-- Botón para mostrar/ocultar la contraseña -->
+            <button class="TooglePassword" type="button" (click)="alternarContrasena()"
+                [attr.aria-label]="verContrasena ? 'Ocultar contraseña' : 'Mostrar contraseña'">
+
+                <svg *ngIf="verContrasena" class="icono" viewBox="0 0 28 28" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path clip-rule="evenodd"
+                            d="M22.6928 1.55018C22.3102 1.32626 21.8209 1.45915 21.6 1.84698L19.1533 6.14375C17.4864 5.36351 15.7609 4.96457 14.0142 4.96457C9.32104 4.96457 4.781 7.84644 1.11993 13.2641L1.10541 13.2854L1.09271 13.3038C0.970762 13.4784 0.967649 13.6837 1.0921 13.8563C3.79364 17.8691 6.97705 20.4972 10.3484 21.6018L8.39935 25.0222C8.1784 25.4101 8.30951 25.906 8.69214 26.1299L9.03857 26.3326C9.4212 26.5565 9.91046 26.4237 10.1314 26.0358L23.332 2.86058C23.553 2.47275 23.4219 1.97684 23.0392 1.75291L22.6928 1.55018ZM18.092 8.00705C16.7353 7.40974 15.3654 7.1186 14.0142 7.1186C10.6042 7.1186 7.07416 8.97311 3.93908 12.9239C3.63812 13.3032 3.63812 13.8561 3.93908 14.2354C6.28912 17.197 8.86102 18.9811 11.438 19.689L12.7855 17.3232C11.2462 16.8322 9.97333 15.4627 9.97333 13.5818C9.97333 11.2026 11.7969 9.27368 14.046 9.27368C15.0842 9.27368 16.0317 9.68468 16.7511 10.3612L18.092 8.00705ZM15.639 12.3137C15.2926 11.7767 14.7231 11.4277 14.046 11.4277C12.9205 11.4277 12 12.3906 12 13.5802C12 14.3664 12.8432 15.2851 13.9024 15.3624L15.639 12.3137Z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                        <path
+                            d="M14.6873 22.1761C19.1311 21.9148 23.4056 19.0687 26.8864 13.931C26.9593 13.8234 27 13.7121 27 13.5797C27 13.4535 26.965 13.3481 26.8956 13.2455C25.5579 11.2677 24.1025 9.62885 22.5652 8.34557L21.506 10.2052C22.3887 10.9653 23.2531 11.87 24.0894 12.9239C24.3904 13.3032 24.3904 13.8561 24.0894 14.2354C21.5676 17.4135 18.7903 19.2357 16.0254 19.827L14.6873 22.1761Z"
+                            fill="currentColor"></path>
+                    </g>
+                </svg>
+                <svg *ngIf="!verContrasena" class="icono" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier"></g>
+                    <g id="SVGRepo_tracerCarrier"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M1 12C1 12 5 20 12 20C19 20 23 12 23 12" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></circle>
+                    </g>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="message-error"
+        *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.touched || submitted)">
+
+        <div *ngIf="registerForm.get('password')?.errors?.['required']">
+            La contraseña es obligatoria.
+        </div>
+        <div *ngIf="registerForm.get('password')?.errors?.['minlength']">
+            La contraseña debe tener al menos 6 caracteres.
+        </div>
+    </div>
+
+    <div class="message-error" *ngIf="erroresValidacion && erroresValidacion['password']">
+        {{ erroresValidacion['password'] }}
+    </div>
+
+
+    <div class="flex-between" style="margin-top: 30px;;">
+
+        <a type="button" [routerLink]="'/account/login'">
+            <svg class="icono" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill="currentColor" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"></path>
+                    <path fill="currentColor"
+                        d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z">
+                    </path>
+                </g>
+            </svg>
+            <span>Tengo una cuenta</span>
+        </a>
+
+        <button class="btn-dark" type="submit">
+           
+            <span> Crear cuenta </span>
+        </button>
+    </div>
+
+
+
+
+
+
+
+</form>

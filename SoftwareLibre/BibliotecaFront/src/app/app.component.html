@@ -1,0 +1,33 @@
+<div>
+  <div class="buttons">
+
+    <a routerLink="/libros/nuevo">Crear un nuevo Libro</a>
+  </div>
+
+  <router-outlet></router-outlet>
+
+</div>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .buttons {
+    display: inline-block;
+    margin: 10px 10px;
+    gap: 20px;
+  }
+
+  .buttons a {
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 10px 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+</style>
