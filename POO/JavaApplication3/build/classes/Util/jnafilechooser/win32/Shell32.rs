@@ -1,0 +1,2 @@
+jnafilechooser.win32.Shell32$BrowseInfo
+jnafilechooser.win32.Shell32

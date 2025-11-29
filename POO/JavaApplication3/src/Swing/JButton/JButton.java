@@ -1,0 +1,184 @@
+package Swing.JButton;
+
+import Util.Ripple.RippleEffect;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Insets;
+import java.awt.RenderingHints;
+import java.awt.geom.Area;
+import java.awt.geom.RoundRectangle2D;
+import java.awt.image.BufferedImage;
+import javax.swing.border.EmptyBorder;
+import Util.Shadow.ShadowRenderer;
+import com.formdev.flatlaf.extras.FlatSVGIcon;
+import com.formdev.flatlaf.extras.FlatSVGIcon.ColorFilter;
+
+public class JButton extends javax.swing.JButton {
+
+    public int getButton_Round() {
+        return Button_Round;
+    }
+
+    public void setButton_Round(int Button_Round) {
+        this.Button_Round = Button_Round;
+    }
+
+    public Color getButton_ShadowColor() {
+        return Button_ShadowColor;
+    }
+
+    public void setButton_ShadowColor(Color Button_ShadowColor) {
+        this.Button_ShadowColor = Button_ShadowColor;
+        createImageShadow();
+        repaint();
+    }
+
+    public void setButton_RippleColor(Color color) {
+        rippleEffect.setRippleColor(color);
+    }
+
+    public Color getButton_RippleColor() {
+        return rippleEffect.getRippleColor();
+    }
+
+    public boolean isButton_BorderActived() {
+        return Button_BorderActived;
+    }
+
+    public void setButton_BorderActived(boolean Button_BorderActived) {
+        this.Button_BorderActived = Button_BorderActived;
+    }
+
+    public Color getButton_BorderColor() {
+        return Button_BorderColor;
+    }
+
+    public void setButton_BorderColor(Color Button_BorderColor) {
+        this.Button_BorderColor = Button_BorderColor;
+    }
+
+    public Color getIconColorFilter() {
+        return IconColorFilter;
+    }
+
+    public void setIconColorFilter(Color IconColorFilter) {
+        this.IconColorFilter = IconColorFilter;
+    }
+
+    public FlatSVGIcon getIconSVG() {
+        return IconSVG;
+    }
+
+    public void setIconSVG(FlatSVGIcon IconSVG) {
+        this.IconSVG = IconSVG;
+        this.IconSVG.setColorFilter(this.colorFilter);
+        setIcon(this.IconSVG);
+    }
+
+    private int Button_Round = 10;
+    private Color Button_ShadowColor = new Color(170, 170, 170);
+    private BufferedImage imageShadow;
+    private final Insets shadowSize = new Insets(2, 5, 8, 5);
+    private final RippleEffect rippleEffect = new RippleEffect(this);
+    FlatSVGIcon IconSVG;
+    Color IconColorFilter = new Color(0, 0, 0);
+    ColorFilter colorFilter = new ColorFilter(color -> IconColorFilter);
+    boolean Button_BorderActived = false;
+    Color Button_BorderColor = new Color(210, 210, 210);
+
+    
+    public JButton() {
+
+        setBorder(new EmptyBorder(10, 12, 15, 12));
+        setContentAreaFilled(false);
+        setBackground(new Color(255, 255, 255));
+        setForeground(new Color(80, 80, 80));
+        rippleEffect.setRippleColor(new Color(220, 220, 220));
+        
+       
+    }
+
+    @Override
+    protected void paintComponent(Graphics grphcs) {
+        Graphics2D g2 = (Graphics2D) grphcs.create();
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        double width = getWidth() - (shadowSize.left + shadowSize.right);
+        double height = getHeight() - (shadowSize.top + shadowSize.bottom);
+        double x = shadowSize.left;
+        double y = shadowSize.top;
+        //  Create Shadow Image
+        g2.drawImage(imageShadow, 0, 0, null);
+        //  Create Background Color
+
+        g2.setColor(getBackground());
+        Area area = new Area(new RoundRectangle2D.Double(x, y, width, height, Button_Round, Button_Round));
+        g2.fill(area);
+
+        if (Button_BorderActived) {
+            g2.setColor(Button_BorderColor);
+            g2.drawRoundRect((int) x, (int) y, (int) width - 1, (int) height - 1, Button_Round, Button_Round);
+        }
+
+        rippleEffect.reder(grphcs, area);
+        g2.dispose();
+
+        super.paintComponent(grphcs);
+    }
+
+    @Override
+    public void setBounds(int x, int y, int width, int height) {
+        super.setBounds(x, y, width, height);
+        createImageShadow();
+    }
+
+    private void createImageShadow() {
+        int height = getHeight();
+        int width = getWidth();
+        if (width > 0 && height > 0) {
+            imageShadow = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+            Graphics2D g2 = imageShadow.createGraphics();
+            BufferedImage img = createShadow();
+            if (img != null) {
+                g2.drawImage(createShadow(), 0, 0, null);
+            }
+            g2.dispose();
+        }
+    }
+
+    int Button_ShadowSize = 5;
+    float Button_ShawdowOpacity = 0.3f;
+
+    public int getButton_ShadowSize() {
+        return Button_ShadowSize;
+    }
+
+    public void setButton_ShadowSize(int Button_ShadowSize) {
+        this.Button_ShadowSize = Button_ShadowSize;
+    }
+
+    public float getButton_ShawdowOpacity() {
+        return Button_ShawdowOpacity;
+    }
+
+    public void setButton_ShawdowOpacity(float Button_ShawdowOpacity) {
+        this.Button_ShawdowOpacity = Button_ShawdowOpacity;
+    }
+
+   
+    
+    private BufferedImage createShadow() {
+        int width = getWidth() - (shadowSize.left + shadowSize.right);
+        int height = getHeight() - (shadowSize.top + shadowSize.bottom);
+        if (width > 0 && height > 0) {
+            BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+            Graphics2D g2 = img.createGraphics();
+            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.fill(new RoundRectangle2D.Double(0, 0, width, height, Button_Round, Button_Round));
+            g2.dispose();
+            return new ShadowRenderer(Button_ShadowSize, Button_ShawdowOpacity, Button_ShadowColor).createShadow(img);
+        } else {
+            return null;
+        }
+    }
+}
