@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* Estilo base para el popup */
+.PopupMessage {
+    display: none;
+    position: fixed;
+    
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+
+/* Estilos específicos para cada tipo */
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+
+.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 2px solid #ffeeba;
+}
+
+.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 2px solid #bee5eb;
+}
+
+.error {
+    background-color: #f8d7da; /* Fondo rojo claro */
+    color: #721c24;           /* Texto rojo oscuro */
+    border: 2px solid #f5c6cb; /* Borde rojo */
+}
+
+.default{
+	background-color: #ffffff; /* Fondo rojo claro */
+    color: #000000;           /* Texto rojo oscuro */
+    border: 1px solid rgb(220,220,220); /* Borde rojo */
+}
+
+/* Overlay que bloquea interacciones */
+.Overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    z-index: 999; /* Debajo del popup */
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<table>
+		<thead>
+		</thead>
+		
+		<tbody>
+			<tr th:each="usuario:${listaUsuarios}">
+				<td th:text="${usuario.idusuario}"></td>
+				<td th:text="${usuario.username}"></td>
+				 
+				<td>
+					<form th:action="@{/user/delete/{id}(id=${usuario.idusuario})}" method="post">
+	                        <input type="hidden" name="_method" value="delete" />
+	                        <button type="submit">Eliminar</button>
+	                </form>
+                </td>
+                
+			</tr>
+		</tbody>
+		
+		
+
+	</table>
+	
+	<div>
+		<form action="#" th:action="@{/user/adduser}" th:object="${Usuario}" method="post">
+		
+		    <label for="username">Username:</label>
+		    <input type="text" id="username" th:field="*{username}">
+		   
+		    <label for="password">Password:</label>
+		    <input type="password" id="password" th:field="*{password}">
+		
+		    <button type="submit">Guardar</button>
+		    
+		</form>
+	</div>
+	
+	
+</body>
+
+</html>

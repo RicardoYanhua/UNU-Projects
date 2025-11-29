@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+	<div th:fragment="">
+
+		<form th:action="@{/Login}" method="post"
+			onsubmit="return ValidarFormularioSesion()">
+			<h1 class="text-center mb-4 fs-2 fw-bold">Iniciar Sesión</h1>
+			<p class="text-center text-muted mb-4">Accede a tu cuenta para
+				acceder a tus registros y recursos.</p>
+
+			<!-- Campo de usuario -->
+			<label for="usuario" class="form-label mb-1 fw-bold">Usuario</label>
+			<div class="Container-Input mb-3">
+				<img src="/SVG/icon-default.svg"> <input id="InputUsuario"
+					type="search" placeholder="Ingresa tu usuario" name="username"
+					autocomplete="off">
+			</div>
+
+			<!-- Campo de contraseña -->
+			<label for="InputPassword" class="form-label mb-1 fw-bold">Contraseña</label>
+			<div class="Container-Input mb-1">
+				<img src="/SVG/icon-key.svg"> <input id="InputPassword"
+					type="password" placeholder="Ingresa tu contraseña" name="password">
+				<!-- Botón para mostrar/ocultar la contraseña -->
+				<button class="ButtonTooglePasswordView" type="button"
+					onclick="ToggleVisibilityPassword(this)"></button>
+			</div>
+
+			<!-- Mensaje de error en caso de credenciales incorrectas -->
+			<p class="text-danger fs-12 m-0 py-0" th:if="${param.Error}"
+				th:text="'Datos invalidos. Por favor intenta de nuevo.'"></p>
+			<p class="text-danger fs-14 m-0 py-0" id="ErrorCampo"></p>
+
+			<!-- Enlaces de recuperación de contraseña y registro -->
+
+			<p class="text-muted fs-12 my-3">
+				¿No tienes una cuenta? <a th:href="@{/Register}">Regístrate aquí</a>
+			</p>
+
+			<!-- Botón para enviar el formulario -->
+			<div class="d-flex align-items-center mt-2">
+				<button type="submit"
+					class="btn btn-success fs-5 fw-bold w-100 py-2 rounded-pill">Ingresar</button>
+			</div>
+
+			<!-- Contenedor con íconos de redes sociales -->
+			<div class="container mt-3">
+				<div class="d-flex justify-content-center gap-3">
+					<img src="/SVG/icon-github.svg" alt="Logo 2" class="img-fluid"
+						width="35" height="35"> <img src="/SVG/icon-spring.svg"
+						alt="Logo 3" class="img-fluid" width="35" height="35">
+				</div>
+			</div>
+		</form>
+
+	</div>
+
+
+</body>
+</html>

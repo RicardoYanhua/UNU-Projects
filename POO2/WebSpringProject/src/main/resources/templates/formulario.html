@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Formulario</title>
+</head>
+<body>
+
+
+	<div>
+		
+		<form action="#" th:action = "@{/PostController/addPersona}" th:object= "${Persona}" method="post">
+		
+		
+			<label>Persona</label>
+			
+			<label for = "text1">Nombre</label>
+			<input id = "text1"type = "text" placeholder="Nombres" th:field="*{Nombre}">
+			
+			<label for = "text2">Telefono</label>
+			<input id = "text2"type = "text" placeholder="Telefono" th:field = "*{Telefono}">
+			
+			<input type = "submit" value = "Enviar">
+		
+		</form>
+	
+	</div>
+	
+</body>
+</html>
