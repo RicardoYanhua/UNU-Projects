@@ -10,7 +10,7 @@ import Mesaage.ConfDelete;
 import Mesaage.EditItem;
 import Mesaage.ViewItem;
 import Mesaage.ViewItemLastVenta;
-import ScrollWidget.Aux.EventItem;
+import ScrollWidget.auxiliary.EventItem;
 import ScrollWidget.Objeto.CardBoleta;
 import ScrollWidget.Objeto.Document;
 import ScrollWidget.Objeto.DocumentBoleta;

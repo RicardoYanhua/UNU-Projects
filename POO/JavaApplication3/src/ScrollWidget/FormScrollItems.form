@@ -55,7 +55,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Container class="ScrollWidget.Aux.PanelScroll" name="p">
+        <Container class="ScrollWidget.auxiliary.PanelScroll" name="p">
         </Container>
       </SubComponents>
     </Container>

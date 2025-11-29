@@ -1,7 +1,7 @@
 package ScrollWidget;
 
-import ScrollWidget.Aux.WrapLayout;
-import ScrollWidget.Aux.EventItem;
+import ScrollWidget.auxiliary.WrapLayout;
+import ScrollWidget.auxiliary.EventItem;
 import ScrollWidget.Objeto.CardBoleta;
 import ScrollWidget.Objeto.CardFactura;
 import ScrollWidget.Objeto.Document;
@@ -116,7 +116,7 @@ public class FormScrollItems extends JPanel {
     private void initComponents() {
 
         scroll = new javax.swing.JScrollPane();
-        p = new ScrollWidget.Aux.PanelScroll();
+        p = new ScrollWidget.auxiliary.PanelScroll();
         Titulo = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(240, 240, 255));
@@ -153,7 +153,7 @@ public class FormScrollItems extends JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Titulo;
-    private ScrollWidget.Aux.PanelScroll p;
+    private ScrollWidget.auxiliary.PanelScroll p;
     private javax.swing.JScrollPane scroll;
     // End of variables declaration//GEN-END:variables
 }
