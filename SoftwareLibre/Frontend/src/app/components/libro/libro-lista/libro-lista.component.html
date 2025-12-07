@@ -1,0 +1,77 @@
+<div class="flex-end">
+    <input type="text" placeholder="Buscar..." (keyup)="BuscarLibro($event)"/>
+
+
+
+    <button class="btn btn-primary" routerLink="/libros/crear">
+        <span>Nuevo Libro</span>    
+    </button>
+
+
+</div>
+
+<table>
+
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Titulo
+            </th>
+            <th>
+                Autor
+            </th>
+            <th>
+                ISBN
+            </th>
+            <th>
+                Editorial
+            </th>
+            <th>
+                Año Publicacion
+            </th>
+            <th>
+                Categoria
+            </th>
+            <th>
+                Acciones
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let atributo of ARRAY_LIST_DATA">
+            <td>
+                {{ atributo.id }}
+            </td>
+            <td>
+                {{ atributo.titulo }}
+            </td>
+            <td>
+                {{ atributo.autorNombre }}
+            </td>
+            <td>
+                {{ atributo.isbn }}
+            </td>
+            <td>
+                {{ atributo.editorial }}
+            </td>
+            <td>
+                {{ atributo.anioPublicacion }}
+            </td>
+            <td>
+                {{ atributo.categoriaNombre }}
+            </td>
+            <td>
+                <button class="btn btn-primary"
+                    [routerLink]="['/libros/actualizar',atributo.id]"><span>Editar</span></button>
+                <button class="btn btn-primary" (click)="Eliminar(atributo.id)"><span>Eliminar</span></button>
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>

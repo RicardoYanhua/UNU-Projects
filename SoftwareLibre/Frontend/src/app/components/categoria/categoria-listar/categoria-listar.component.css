@@ -1,0 +1,7 @@
+:host{
+
+    margin: auto;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+}

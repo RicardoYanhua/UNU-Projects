@@ -1,0 +1,22 @@
+    <span class = "titulo">Registrar nueva Categoria</span>
+
+<form [formGroup]="EntityForm" (ngSubmit)="onSubmit()">
+
+
+    <label >Nombre de la categoria</label>
+    <input type="text"  id="nombre" formControlName="nombre">
+
+
+     <div class="flex-end">
+
+        <button class="btn btn-primary" type="submit">
+            <span>Guardar</span>
+        </button>
+
+        <button class="btn btn-secondary" routerLink="/categorias">
+            <span>Cancelar</span>
+        </button>
+
+    </div>
+
+</form>

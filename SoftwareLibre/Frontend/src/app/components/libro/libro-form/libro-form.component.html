@@ -1,0 +1,56 @@
+<span class="titulo">Registrar nuevo Libro</span>
+
+<form [formGroup]="EntityForm" (ngSubmit)="onSubmit()">
+
+
+    <label>Titulo</label>
+    <input type="text" id="titulo" formControlName="titulo">
+
+    <label>Autor</label>
+    <mat-form-field appearance="outline">
+        <mat-select id="idAutor" formControlName="idAutor">
+            <mat-option value="">Seleccione un autor</mat-option>
+
+            <mat-option *ngFor="let item of CBOX_AUTORES" [value]="item.id">
+                {{ item.nombres }} {{ item.apellidos }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+
+    <label>ISBN</label>
+    <input type="text" id="isbn" formControlName="isbn">
+
+    <label>Editorial</label>
+    <input type="text" id="editorial" formControlName="editorial">
+
+    <label>Año Publicacion</label>
+    <input type="text" id="anioPublicacion" formControlName="anioPublicacion">
+
+
+    <label>Categoria</label>
+    <mat-form-field appearance="outline">
+        <mat-select id="idCategoria" formControlName="idCategoria">
+            <mat-option value="">Seleccione un Categoria</mat-option>
+
+            <mat-option *ngFor="let item of CBOX_CATEGORIAS" [value]="item.id">
+                {{ item.nombre }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="flex-end">
+
+        <button class="btn btn-primary" type="submit">
+            <span>Guardar</span>
+        </button>
+
+        <button class="btn btn-secondary" routerLink="/libros">
+            <span>Cancelar</span>
+        </button>
+
+    </div>
+
+
+</form>

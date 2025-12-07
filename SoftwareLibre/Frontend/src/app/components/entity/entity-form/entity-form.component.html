@@ -1,0 +1,22 @@
+    <span class = "titulo">Registrar nuevo Libro</span>
+
+<form [formGroup]="EntityForm" (ngSubmit)="onSubmit()">
+
+
+    <label >Nombre</label>
+    <input type="text"  id="nombre" formControlName="nombre">
+
+
+     <div class="flex-end">
+
+        <button class="btn btn-primary" type="submit">
+            <span>Guardar</span>
+        </button>
+
+        <button class="btn btn-secondary" routerLink="/libros">
+            <span>Cancelar</span>
+        </button>
+
+    </div>
+
+</form>

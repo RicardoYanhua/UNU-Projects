@@ -1,0 +1,24 @@
+    <span class = "titulo">Registrar nuevo Autor</span>
+
+<form [formGroup]="EntityForm" (ngSubmit)="onSubmit()">
+
+
+    <label >Nombres</label>
+    <input type="text"  id="nombre" formControlName="nombres">
+    <label >Apellidos</label>
+    <input type="text"  id="nombre" formControlName="apellidos">
+
+
+     <div class="flex-end">
+
+        <button class="btn btn-primary" type="submit">
+            <span>Guardar</span>
+        </button>
+
+        <button class="btn btn-secondary" routerLink="/autores">
+            <span>Cancelar</span>
+        </button>
+
+    </div>
+
+</form>

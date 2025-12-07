@@ -1,0 +1,42 @@
+<div class = "flex-end">
+    <input type="text" placeholder="Busqueda">
+    <button class = "btn btn-info" routerLink="/autores/crear">
+        <span>Agregar</span>
+    </button>
+</div>
+
+
+  
+<table>
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let atributo of ARRAY_LIST_DATA">
+            <td>
+                {{ atributo.id }}
+            </td>
+            <td>
+                {{ atributo.nombres }}
+            </td>
+            <td>
+                {{ atributo.apellidos }}
+            </td>
+            
+            <td>
+                <button class = "btn btn-yellow" [routerLink]="['/autores/actualizar',atributo.id]"><span>Actualizar</span></button>
+                <button class = "btn btn-danger" (click)="Eliminar(atributo.id)" title="Eliminar"> <span>Eliminar</span> </button>
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
